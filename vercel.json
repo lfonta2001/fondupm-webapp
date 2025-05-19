@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+        { "source": "/login_register", "destination": "/login_register/login_register.html" },
+        { "source": "/forgot_password", "destination": "/support/forgot_password/forgot_password.html" }
+    ]
+}

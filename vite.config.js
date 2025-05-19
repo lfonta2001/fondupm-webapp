@@ -6,7 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = resolve(__dirname, 'src')
-const outDir = resolve(__dirname, 'dist')
 
 export default defineConfig({
   root,
@@ -15,10 +14,10 @@ export default defineConfig({
     tailwindcss()
   ],
   build: {
-    outDir,
     emptyOutDir: true,
     rollupOptions: {
       input: {
+        main: resolve(root, 'index.html'),
         login_register: resolve(root, 'login_register/login_register.html'),
         forgot_password: resolve(root, 'support/forgot_password/forgot_password.html'),
       }
